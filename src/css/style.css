@@ -1,0 +1,253 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    min-width: 420px;
+    font-size: 16px;
+    line-height: 20px;
+    background-color: #5c8ab3;
+    position: relative;
+
+}
+
+html, body {
+    height: 100%;
+}
+
+.chat {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.chat-content {
+    display: grid;
+    align-content: end;
+    align-items: end;
+    justify-content: end;
+    flex-grow: 1;
+    padding: 15px 20px 120px 30px;
+    background-color: #c2f3c4;
+}
+
+.chat-form {
+    padding: 32px 20px;
+    background-color: #59b35d;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.chat-form-input, .widget-input {
+    width: 100%;
+    box-sizing: border-box;
+    margin-right: 16px;
+    padding: 12px 120px 12px 20px;
+
+    border: 2px solid #0a7239;
+    border-radius: 50px;
+    background-color: #ffffff;
+
+}
+
+.chat-form-input::placeholder, .widget-input::placeholder {
+    color: #cccccc;
+}
+
+.chat-form-input:hover, .widget-input:hover {
+    border-color: #cf4c57;
+    outline: none;
+}
+
+.chat-form-input:focus, .widget-input:focus {
+    border-color: #31aedf;
+    outline: none;
+}
+
+.bnt-container {
+    position: absolute;
+    height: 30px;
+    bottom: 40px;
+    right: 35px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;
+}
+
+.chat-form-button {
+    width: 100px;
+}
+
+.buttons-active {
+    width: 136px;
+}
+
+.chat-form-button div, .buttons-active div {
+    width: 30px;
+    height: 30px;
+    border: 2px solid darkgray;
+    border-radius: 50px;
+    padding: 3px;
+    box-sizing: border-box;
+    text-align: center;
+    color: darkgray;
+
+}
+
+.chat-form-button div:hover, .buttons-active div:hover {
+    color: #56cf4c;
+    border: 2px solid #56cf4c;
+}
+
+.timer {
+    color: darkgray;
+    align-self: center;
+    margin: 0 8px;
+}
+
+.chat-message video {
+    width: 300px;
+    height: 200px;
+}
+
+
+/* Message */
+
+.chat-message {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 20px 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 20px 4px 4px 20px;
+    max-width: 425px;
+}
+
+.chat-message-text {
+    margin: 0;
+}
+
+.chat-message-time {
+    margin-bottom: 5px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #6994ba;
+    align-self: flex-end;
+
+}
+
+.chat-message-geolocation {
+    font-size: 12px;
+    line-height: 16px;
+    color: #6994ba;
+    margin-top: 8px;
+}
+
+.chat-message + .chat-message {
+    margin-top: 12px;
+}
+
+.chat-message:last-child {
+    border-radius: 20px 4px 20px 20px;
+}
+
+.chat-message:first-child {
+    border-radius: 20px 20px 4px 20px;
+}
+
+.chat-message-button {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    background-color: #fff;
+    color: darkgray;
+    border: none;
+    border-radius: 50%;
+    user-select: none;
+    touch-action: manipulation;
+    cursor: pointer;
+
+    visibility: hidden;
+}
+
+
+.chat-message:hover .chat-message-button,
+.chat-message:focus .chat-message-button {
+    visibility: visible;
+}
+
+.chat-message:focus-within .chat-message-button {
+    visibility: visible;
+}
+
+.chat-message-button:hover {
+    color: #dd1d2d;
+}
+
+
+/* Widget */
+
+.widget {
+    width: 300px;
+    padding: 0 20px 20px;
+    color: rgb(33, 37, 41);
+
+    position: absolute;
+    z-index: 10000;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+
+    border: 1px solid #265681;
+    border-radius: 20px;
+    background-color: aliceblue;
+}
+
+.widget h2 {
+    color: #265681;
+}
+
+
+.popover-body {
+    color: rgb(33, 37, 41);
+    margin-top: 5px;
+}
+
+.btn-container {
+    margin-top: 15px;
+    text-align: right;
+}
+
+.btn {
+    padding: 9px 20px;
+    color: #fff;
+    background-color: #39b54a;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+    border: 2px solid transparent;
+    border-radius: 50px;
+    user-select: none;
+    outline: none;
+    touch-action: manipulation;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #56cf4c;
+    box-shadow: 0 8px 4px rgba(0, 0, 0, 0.15);
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+
+
