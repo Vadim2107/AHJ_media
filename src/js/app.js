@@ -1,5 +1,4 @@
 import getPositions from './Positions';
-import checkMediaRecording from './checkMediaRecording';
 
 const body = document.querySelector('body');
 const chatContainer = document.querySelector('.chat-content');
@@ -9,7 +8,6 @@ const newMessageInput = newMessageForm.querySelector('.chat-form-input');
 const chatBtnCont = document.querySelector('.chat-form-button');
 const audioBtn = chatBtnCont.querySelector('.button-audio');
 const videoBtn = chatBtnCont.querySelector('.button-video');
-const mediaBtnCont = document.querySelector('.buttons-active');
 
 // храним все сообщения в виде объектов
 const messages = [];
@@ -26,9 +24,9 @@ newMessageForm.addEventListener('submit', (evt) => {
 });
 
 audioBtn.addEventListener('click', () => {
-  checkMediaRecording('audio', chatBtnCont, mediaBtnCont, messages, chatContainer, newMessageInput, body);
+  console.log('audio');
 });
 
 videoBtn.addEventListener('click', () => {
-  checkMediaRecording('video', chatBtnCont, mediaBtnCont, messages, chatContainer, newMessageInput, body);
+  console.log('video');
 });

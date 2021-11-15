@@ -65,7 +65,8 @@ export default class Widget {
   }
 
   checkValidity(string) {
-    return string.match(/(-*\d+\.\d+),\s*(-*\d+\.\d+)/gm);
+    // return string.match(/(-*\d+\.\d+),\s*(-*\d+\.\d+)/gm);
+    return string.match(/\[?(-?\d+\.\d+),\s?(-?\d+\.\d+)\]?/gm);
   }
 
   showError(formWidget, inputTarget, text) {
